@@ -71,6 +71,12 @@ router.get("/characters/:id", (req, res, next) => {
     .catch(err => console.error(err))
 });
 
+router.post("/characters/:id/delete", async (req, res)=> {
+    await axios.delete(`https://ih-crud-api.herokuapp.com/characters/${req.params.id}`)
+    res.redirect('/characters')
+})
+
+
 
 
  

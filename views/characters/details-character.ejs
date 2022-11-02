@@ -6,3 +6,7 @@
 
 
 <a href="/characters/<%- character.id %>/edit">Edit</a>
+
+<form method="POST" action="/characters/<%= character.id %>/delete">
+    <button type="submit">Delete</button>
+</form>
